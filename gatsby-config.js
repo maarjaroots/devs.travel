@@ -1,10 +1,18 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+const contentfulConfig = require("./gatsby-config/contentfulConfig")
 
 module.exports = {
   /* Your site config here */
-  plugins: ["gatsby-plugin-postcss"],
+  plugins: [
+    "gatsby-plugin-postcss",
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: "gatsby-source-contentful",
+      options: contentfulConfig,
+    },
+  ],
 }
