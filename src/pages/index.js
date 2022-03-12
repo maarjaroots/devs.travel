@@ -12,7 +12,7 @@ export default function Home() {
             devs.travel
           </p>
           <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-            displaying content soon
+            displaying content soon.
           </p>
         </div>
       </div>
